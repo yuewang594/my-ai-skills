@@ -1,0 +1,4 @@
+interface:
+  display_name: "Statistics Interview Coach"
+  short_description: "Practice statistics for data science interviews"
+  default_prompt: "Use $statistics-interview-coach to help me practice statistics for a data science interview."
