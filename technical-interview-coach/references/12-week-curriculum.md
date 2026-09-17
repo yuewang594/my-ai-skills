@@ -1,8 +1,8 @@
-# 12-Week L6 / Staff Product Data Scientist Interview Curriculum
+# Accelerated L6 / Staff Product Data Scientist Interview Curriculum
 
 ## Calendar Anchor
 
-Treat the week of **August 31, 2026 through September 6, 2026 as Week 1**.
+Treat **August 31, 2026 through September 6, 2026 as Week 1**.
 
 Week mapping:
 - Week 1: Aug 31–Sep 6
@@ -13,90 +13,113 @@ Week mapping:
 - Week 6: Oct 5–Oct 11
 - Week 7: Oct 12–Oct 18
 - Week 8: Oct 19–Oct 25
-- Week 9: Oct 26–Nov 1
-- Week 10: Nov 2–Nov 8
-- Week 11: Nov 9–Nov 15
-- Week 12: Nov 16–Nov 22
 
-Always infer the current curriculum week from the date unless the user explicitly asks to work ahead or revisit an earlier week.
+Primary goal: **interview-ready by the end of Week 8**.
+
+Material previously planned for Weeks 9–12 is compressed into Weeks 4–8 through integrated code review, full experiment-analysis cases, scale/performance reasoning, and weekend interview simulations.
 
 ## Weekly Curriculum
 
-| Week | Statistics / Experimentation | Python / Pandas | L6 Product Case | Measurable Milestone |
+| Week | Statistics / Experimentation Companion | Python / Pandas | L6 Product / Technical Case | Measurable Milestone |
 |---|---|---|---|---|
-| 1 | Probability, conditional probability, expectation, variance, common distributions | Python data structures, functions, comprehensions, mutability, sorting | Metric definition: vague product goal → measurable outcome | ≥80% stats fundamentals; complete 3 Python reviews |
-| 2 | Sampling, CLT, standard error, confidence intervals | NumPy arrays, indexing, masks, broadcasting, vectorization | Metric trees, north-star metrics, guardrails | Explain CI correctly in <2 min; ≥4/5 on 3 NumPy reviews |
-| 3 | Hypothesis testing, p-values, Type I/II error, power, MDE | Pandas filtering, groupby, agg, transform, apply | A/B test design from ambiguous PM request | ≥85% inference questions; catch ≥80% planted Pandas bugs |
-| 4 | Randomization, exposure, SRM, ITT, guardrails | Joins, merge cardinality, duplicates, nulls | Diagnose a broken experiment | First 45-min technical mock ≥17/25 |
-| 5 | Multiple testing, sequential testing, peeking | Datetimes, attribution windows, cohorts | Launch decision with conflicting metrics | Explain peeking risk; solve 2 attribution reviews without hints |
-| 6 | CUPED, variance reduction, ratio metrics, heavy tails | Advanced groupby/window functions, reshape, pivot/melt | Payments / marketplace metric design | Design experiment + metrics + analysis plan in ≤20 min |
-| 7 | Regression intuition, confounding, Simpson’s paradox, selection bias | Event→user tables, denominators, leakage | Causal reasoning when experiment is impossible | Identify causal limitations unprompted in ≥4/5 cases |
-| 8 | DiD, matching intuition, HTE | Performance: vectorization, memory, large joins, 100M-row reasoning | Strategic product investigation / root cause | Second full mock ≥20/25; Staff judgment ≥4/5 |
-| 9 | Interference, network effects, cluster experiments, novelty/carryover | Full experiment-analysis code review | AI product case: engagement, quality, latency, retention | Complete ambiguous case in 35–40 min without interviewer rescue |
-| 10 | Practical vs statistical significance; decision under uncertainty | AI-generated analysis critique: metric + code + stats | Product strategy / growth / monetization | ≥22/25 on at least one mock |
-| 11 | Weak-area remediation + spaced repetition | Weak-area remediation + timed coding/review | Full L6 product analytics mock | 2 mocks; average ≥21/25; no dimension <4/5 |
-| 12 | Rapid recall + high-frequency interview traps | Rapid review + unseen code cases | Full interview loop: technical + product + executive communication | 3 mocks; ≥22/25 twice |
+| 1 | Probability foundations | Python data structures, functions, comprehensions, mutability, sorting | Metric definition | Complete 3 realistic code reviews |
+| 2 | Sampling / CI intuition | NumPy arrays, indexing, masks, broadcasting, vectorization | Metric trees / guardrails | ≥4/5 on 3 NumPy reviews |
+| 3 | Hypothesis testing / ITT / ratio-metric context | Pandas filtering, Boolean masks, groupby, agg, transform, apply, analysis grain | A/B analysis implementation | Catch ≥80% planted Pandas/data-grain bugs |
+| 4 | Randomization/exposure/SRM context | Joins, merge cardinality, duplicates, null keys, unmatched rows, validation assertions; assignment-event joins | Diagnose broken experiment code | 45–60 min technical mock ≥18/25 |
+| 5 | Sequential/time-window context | Datetime, attribution windows, cohorts, retention, partial periods, time zones, late-arriving data; reshape/window operations | Conflicting metric implementation | Solve 2 attribution/cohort reviews without hints |
+| 6 | Ratio/CUPED/experiment context | Event→user aggregation, conversion, retention, ratio metrics, deduplication, exposure, leakage, weighted vs unweighted metrics | Payments / marketplace metric implementation | Build robust analysis plan + code outline in ≤20 min |
+| 7 | Causal/confounding context | Performance and scale: vectorization, apply, memory, large joins, copies/views, chunking, complexity, assertions, 100M-row reasoning | Production-grade analytical review | Independently prioritize correctness vs performance issues |
+| 8 | Integrated experimentation context | Full AI-generated code critique combining Python/Pandas/NumPy, experiment implementation, metrics, data quality, joins, time windows, performance, and validation | Full L6 technical case | 3 realistic mocks around 21–22+/25; no dimension <4/5; independent major-issue detection |
 
-## Weekly Cadence
+## Weekly Practice Mix
 
-- Monday commute: Stats concept lesson; main session: Stats deep dive
-- Tuesday commute: Python knowledge lesson; main session: Python code review
-- Wednesday commute: Stats concept + question; main session: Product case
-- Thursday commute: Python knowledge lesson; main session: integrated Python + Stats problem
-- Friday commute: weakness review; main session: light review / rest
-- Saturday commute: spaced repetition; main session: mock interview or deep dive
-- Sunday commute: weekly recap; main session: scorecard + next-week adjustment
+Use approximately:
+- 55% current-week technical topics;
+- 30% pulled-forward advanced/integrated material;
+- 15% spaced repetition / weakness remediation.
 
-## Curriculum Adherence Rules
+Do not wait until Week 8 to introduce ambiguous schemas, multi-concept code, or Staff-level issue prioritization.
 
-1. Keep at least 70% of weekly practice aligned to the current week's curriculum.
-2. Use up to 20% for spaced repetition of earlier material.
-3. Use up to 10% for targeted remediation of a recurring weakness, even if it belongs to another week.
-4. Do not move substantially ahead just because the candidate performs well once. Require repeated evidence of mastery.
-5. If the candidate is behind, prioritize core concepts from the prior week before adding new material, but continue exposing them to the current week so they do not drift further behind.
-6. If the candidate is ahead, increase question difficulty and ambiguity rather than skipping the curriculum.
-7. At the start of a session, silently identify the current week and its target topics.
-8. When relevant, tell the user whether the session is on-track, ahead, or behind curriculum.
+## Daily Commute Standard
+
+Daily technical commute lessons should be ~20–25 minutes and add at least one genuinely new interview-relevant concept or harder integrated application.
+
+Include:
+- two concepts;
+- worked code example;
+- line-by-line explanation;
+- second edge-case scenario;
+- rapid-fire code reading;
+- one realistic L6 code-review question;
+- Staff-level answer and validation plan;
+- capability checklist.
+
+For Gmail mobile, each snippet must be a single `<pre>` block with no nested code/span/div wrappers.
+
+## Weekend Technical Interview Simulation
+
+On demand only; never start automatically.
+
+When the user explicitly asks to begin, run a ~60-minute L6-style technical interview simulation:
+- 10–15 min rapid-fire fundamentals / output reasoning;
+- 25–30 min multi-concept code review;
+- 10–15 min end-to-end analytical case;
+- final synthesis.
+
+Use roughly 20–30 prompts/sub-prompts, administered exactly one at a time.
+
+Never advance until the user explicitly says `move on` or clearly asks for the next question.
+
+Questions should combine concepts and mimic real interview ambiguity. Examples:
+- event-level table + user-level metric + many-to-many merge + missing users;
+- assignment/exposure join + post-treatment filtering + wrong denominator;
+- groupby/agg logic + ratio weighting + null semantics;
+- correct-but-slow row-wise apply at 100M rows + correctness tradeoffs;
+- datetime attribution + timezone + late-arriving events + cohort definition.
+
+Require the candidate to explain:
+1. what the code is trying to do;
+2. what is wrong;
+3. which issue is most material;
+4. why it changes the analysis;
+5. how to fix it;
+6. how to validate the fix.
 
 ## Mastery Testing
 
-For each weekly topic, assess mastery using a mix of:
-- concept explanation in the candidate's own words
-- realistic applied scenario
-- hidden-trap question where the concept is not named
-- code review or data reasoning problem when appropriate
-- L6 follow-up asking for assumptions, business impact, and next action
+A technical topic is mastered only after repeated evidence that the candidate can:
+- explain the behavior;
+- predict or diagnose realistic code;
+- handle edge cases;
+- connect implementation to analytical correctness;
+- prioritize material risks;
+- propose validation;
+- perform under interview-like follow-up without rescue.
 
-Do not mark a topic mastered after one correct answer.
+Recognition alone is not mastery.
 
-A topic is considered mastered when the candidate can do all of the following on at least two separate attempts:
-1. explain the concept accurately
-2. apply it in a realistic scenario
-3. identify a common failure mode or misconception
-4. connect it to a product or business decision
+## Week-8 Readiness Standard
 
-## Weekly Progress Check
+By the end of Week 8, the candidate should be able to independently review unfamiliar 30–50 line analytical code and:
+- infer intended analysis;
+- establish table and metric grain;
+- catch merge cardinality/duplication issues;
+- preserve the correct randomized population and denominator;
+- distinguish event-level from user-level calculations;
+- reason about missing/null behavior;
+- diagnose groupby/agg/transform/apply mistakes;
+- identify exposure/leakage/post-treatment-selection problems;
+- reason about datetime/cohort/attribution edge cases;
+- identify correctness vs performance concerns at scale;
+- propose safer code and validation assertions;
+- prioritize the issue most likely to change the business conclusion;
+- communicate a Staff-level recommendation.
 
-At least once per week, provide a short progress check containing:
-- current curriculum week
-- topics tested
-- demonstrated strengths
-- unresolved gaps
-- milestone status
-- whether the user is on-track, ahead, or behind
-- the 1–2 highest-priority next actions
+Target evidence before top-priority loops:
+- three realistic mocks around 21–22+/25;
+- no evaluation dimension below ~4/5;
+- independent identification of the major bug/assumption without interviewer rescue.
 
 ## L6 / Staff Behavior Standard
 
-Across all weeks, reward the candidate for independently doing the following:
-- clarifying ambiguous goals
-- defining population and denominator
-- challenging flawed metrics or premises
-- checking experiment assignment and exposure integrity
-- identifying material edge cases
-- prioritizing major issues over minor ones
-- connecting analysis to product/business decisions
-- stating what could invalidate the conclusion
-- recommending what the team should do next
-
-A technically correct answer should not receive top Staff-level marks if it lacks judgment, prioritization, or decision implications.
+Reward independent clarification of ambiguous goals, schema/grain, populations and denominators, challenge of flawed premises, prioritization of material issues, connection to product/business decisions, invalidation conditions, and practical next actions.
