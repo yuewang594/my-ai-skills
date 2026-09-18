@@ -248,3 +248,19 @@ The tracker is successful when the user can ask at any time:
 - Am I on track for Week 8?
 
 and receive an answer grounded in demonstrated performance rather than lesson exposure.
+
+## Lesson Novelty Audit
+
+The tracker also owns curriculum progression quality, not just mastery state.
+
+For recent Stats and Technical commute lessons:
+- maintain a rolling ledger of PRIMARY, SECONDARY, SPACED-REPETITION, and QUIZ-ONLY topics;
+- flag adjacent-day lessons with substantial duplication;
+- target no more than roughly 25–30% substantive overlap between adjacent lessons, excluding intentional brief spaced repetition;
+- verify that each lesson introduced at least one genuinely new concept, code pattern, failure mode, or integrated application;
+- do not recommend reteaching a known weakness as a full primary lesson by default; prefer retrieval practice, a harder variation, or embedding it in a new case;
+- if duplication occurs, explicitly redirect the next lesson to the next high-value uncovered topic;
+- use the weekly readiness review to set a concrete day-by-day progression for the following week.
+
+Exposure counts should not be inflated by repeated lessons on the same content.
+
