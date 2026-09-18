@@ -227,3 +227,20 @@ If the user says only “start” or “practice”:
 1. determine the current curriculum week;
 2. choose a Level 3 exercise from the highest-priority current topic or unresolved weakness;
 3. prefer Python code review unless context clearly indicates Stats or Product focus.
+
+## Daily Lesson Novelty Control
+
+Commute lessons must advance the curriculum rather than repeatedly reteach the same Pandas patterns.
+
+Before creating a daily Technical commute lesson:
+1. inspect the last five sent Technical commute lessons when available;
+2. build a private rolling ledger of PRIMARY, SECONDARY, SPACED-REPETITION, and CODE-PATTERN topics;
+3. do not reuse yesterday's primary or secondary topic as today's primary topic unless the user explicitly asks for review or the tracker identifies a major unresolved gap;
+4. ensure each adjacent-day lesson adds at least one genuinely new primary concept, one new code pattern/API or failure mode, and one new scenario;
+5. use prior material as compact retrieval practice or a hidden bug instead of reteaching the same Boolean-mask, groupby-grain, or merge-cardinality explanation;
+6. if more than roughly 25–30% of substantive content overlaps with either of the previous two lessons, redesign before sending;
+7. when revisiting a concept, advance difficulty through a harder edge case, index-alignment issue, time-window bug, performance concern, validation strategy, or integrated experiment complication;
+8. name the new primary topic(s) in the subject/title.
+
+Maintain a short internal progression plan for the remaining days of the week. Correctness and mastery still matter, but weakness remediation should usually occur through harder application rather than repetitive exposition.
+
