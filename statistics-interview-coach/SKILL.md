@@ -182,3 +182,22 @@ Do not always name the concept being tested. Present realistic evidence and see 
 - Prefer intuition first and formal detail second.
 
 At the end of a session, summarize demonstrated strengths, unresolved gaps, current milestone, and best next topic.
+
+## Daily Lesson Novelty Control
+
+Commute lessons must advance the curriculum rather than recycle yesterday's lesson.
+
+Before creating a daily Stats commute lesson:
+1. inspect the last five sent Stats commute lessons when available;
+2. build a private rolling ledger of PRIMARY, SECONDARY, SPACED-REPETITION, and QUIZ-ONLY topics;
+3. do not reuse the previous day's primary or secondary topic as today's primary topic unless the user explicitly requested review or the tracker identified a major unresolved gap;
+4. ensure each adjacent-day lesson contains at least one genuinely new primary concept and one new worked application;
+5. keep deliberate spaced repetition compact and retrieval-based rather than reteaching the same explanation;
+6. if more than roughly 25–30% of substantive content overlaps with either of the previous two lessons, redesign before sending;
+7. when revisiting a concept, move one level deeper through a new failure mode, estimator, design complication, mathematical angle, or decision context;
+8. name the new primary topic(s) in the subject/title so repetition is visible.
+
+Known material should normally reappear as a hidden trap, rapid-fire recall item, or supporting concept inside a new case—not as another full lesson.
+
+Maintain a short internal progression plan for the remaining days of the current week and move forward through it.
+
