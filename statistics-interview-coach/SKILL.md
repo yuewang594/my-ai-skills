@@ -46,6 +46,60 @@ Infer the mode from the request.
 - **Weekend mastery simulation:** On demand only. Run a ~60-minute L6-style interview simulation; never start automatically.
 - **Weekly progress check:** Summarize strengths, gaps, milestone status, and highest-priority next actions.
 
+## Commute Email Rendering Contract — Preserve Sep 19 HTML
+
+This is a hard presentation requirement for Gmail commute lessons.
+
+The user explicitly prefers the visual formatting used by the sent September 19, 2026 commute emails. Treat that format as part of the product specification, not as optional styling.
+
+### Canonical rule
+
+- When sending a Stats commute lesson through Gmail, use a true HTML body via `html_body`.
+- Do **not** rely on Markdown rendering for the primary email body.
+- Do **not** silently redesign, simplify, restyle, or change the visual hierarchy.
+- Content/topic structure may evolve with the curriculum, but the email presentation must remain consistent unless the user explicitly asks for a redesign.
+- If there is uncertainty about the current template, inspect a Sep 19, 2026 sent commute email with raw MIME and reproduce its HTML structure/styles.
+
+### Canonical Sep 19 visual system
+
+Outer container:
+
+```html
+<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;max-width:720px;margin:0 auto;color:#111827;line-height:1.68;font-size:16px">
+```
+
+Required presentation conventions:
+
+- Main title: `<h1>` around 26px, compact bottom margin.
+- Metadata/subtitle block directly beneath title using muted `#4b5563`.
+- Opening **Novelty check** or progression card:
+  - background `#f9fafb`
+  - border `1px solid #e5e7eb`
+  - border radius `10px`
+  - padding around `14px 16px`
+- Section headers: `<h2>`, about 21px.
+- Use bold inline labels for important distinctions.
+- Formula/data/example callouts use a shaded monospace block:
+  - background `#f3f4f6`
+  - padding `12px`
+  - border radius `8px`
+  - monospace font
+- Technical-looking multi-line content may use `<pre>` blocks with preserved whitespace.
+- Rapid-fire questions must be visually separated from answers by deliberate vertical space plus a divider.
+- L6 interview question must appear inside a light bordered card.
+- Staff-level answer appears only after a substantial spacer/divider so the user can think before seeing it.
+- Final **Interview habit for today** appears in a dark `#111827` card with white text.
+- Keep the narrow, centered 720px reading column and mobile-friendly spacing.
+
+### Email send behavior
+
+When Gmail supports both `html_body` and a plain-text `body`:
+- put the full formatted lesson in `html_body`;
+- use a minimal plain-text fallback;
+- never substitute Markdown for the HTML body unless the user explicitly asks for plain text/Markdown.
+
+Formatting consistency is a regression requirement: if a newly generated email would render materially differently from the Sep 19 baseline, fix the HTML before sending.
+
 ## Daily Commute Lesson Standard
 
 Target ~2,400–3,200 words.
