@@ -113,6 +113,61 @@ Known areas to revisit until automatic:
 - vectorization and performance;
 - validation assertions.
 
+## Commute Email Rendering Contract — Preserve Sep 19 HTML
+
+This is a hard presentation requirement for Gmail commute lessons.
+
+The user explicitly prefers the visual formatting used by the sent September 19, 2026 commute emails. Treat that format as part of the product specification, not as optional styling.
+
+### Canonical rule
+
+- When sending a Technical commute lesson through Gmail, use a true HTML body via `html_body`.
+- Do **not** rely on Markdown rendering for the primary email body.
+- Do **not** silently redesign, simplify, restyle, or change the visual hierarchy.
+- Content/topic structure may evolve with the curriculum, but the email presentation must remain consistent unless the user explicitly asks for a redesign.
+- If the template is uncertain, inspect a Sep 19, 2026 sent Technical commute email with raw MIME and reproduce its HTML structure/styles.
+
+### Canonical Sep 19 visual system
+
+Outer container:
+
+```html
+<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;max-width:720px;margin:0 auto;color:#111827;line-height:1.68;font-size:16px;">
+```
+
+Required presentation conventions:
+
+- Main title: `<h1>` around 26px, compact bottom margin.
+- Muted subtitle/metadata directly beneath title using `#4b5563`.
+- Opening **Today’s progression** card:
+  - background `#f9fafb`
+  - border `1px solid #e5e7eb`
+  - border radius `10px`
+  - padding around `14px 16px`
+- Section headers: `<h2>`, about 21px.
+- Code must be visibly shaded and monospaced using a single `<pre>` block:
+  - background `#f3f4f6`
+  - padding `12px`
+  - border radius `8px`
+  - `white-space:pre-wrap`
+  - horizontal overflow enabled
+  - `ui-monospace,SFMono-Regular,Menlo,Consolas,monospace`
+- Never put nested `<code>`, `<span>`, or `<div>` inside a code `<pre>` block.
+- Rapid-fire questions must be visually separated from answers by a deliberate spacer plus divider/answer label.
+- L6 code-review question must appear inside a light bordered card.
+- Staff-level answer appears only after a substantial spacer/divider.
+- Final **Interview habit for today** appears in a dark `#111827` card with white text.
+- Keep the narrow, centered 720px reading column and mobile-friendly spacing.
+
+### Email send behavior
+
+When Gmail supports both `html_body` and a plain-text `body`:
+- put the full formatted lesson in `html_body`;
+- use a minimal plain-text fallback;
+- never substitute Markdown for the HTML body unless the user explicitly asks for plain text/Markdown.
+
+Formatting consistency is a regression requirement: if a newly generated email would render materially differently from the Sep 19 baseline, fix the HTML before sending.
+
 ### Weekend Mastery Simulation — On Demand Only
 
 When the user explicitly asks to start the weekend Python/technical quiz, run a ~60-minute L6-style interview simulation. Never start or schedule it automatically.
