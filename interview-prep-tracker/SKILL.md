@@ -249,6 +249,24 @@ The tracker is successful when the user can ask at any time:
 
 and receive an answer grounded in demonstrated performance rather than lesson exposure.
 
+## Commute Email Format Audit
+
+The tracker also owns presentation consistency for recurring Stats and Technical commute emails.
+
+Canonical visual baseline: the sent September 19, 2026 commute emails.
+
+Treat formatting as a durable requirement:
+- Stats and Technical commute emails must use true Gmail HTML via `html_body`, not Markdown-only rendering.
+- Preserve the Sep 19 visual hierarchy: centered ~720px column, strong title, muted metadata, light progression/novelty card, large numbered section headers, shaded monospace blocks, deliberate question/answer spacing, light L6-case card, and dark Interview-habit footer.
+- Technical code snippets must be single shaded `<pre>` blocks with preserved indentation.
+- Do not change the visual template merely because content, curriculum week, or lesson topic changes.
+- A format change is allowed only when the user explicitly requests a redesign or formatting change.
+- If a sent commute lesson materially deviates from the baseline, treat it as a formatting regression and restore the canonical template on the next send.
+
+The lesson-quality audit should therefore check both:
+1. curriculum novelty/progression; and
+2. visual/template consistency.
+
 ## Lesson Novelty Audit
 
 The tracker also owns curriculum progression quality, not just mastery state.
